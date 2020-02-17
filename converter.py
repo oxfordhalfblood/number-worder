@@ -2,9 +2,6 @@
 
 import argparse
 
-# look afterwards:  https://stackoverflow.com/questions/30956688/python-argparse-customizing-error-messages
-# https://stackoverflow.com/questions/53445769/argparse-define-custom-actions-or-types-with-additional-arguments
-
 ## This class has converter properties, takes parsed argument and converts it    
 class Converter:
     def __init__(self):
@@ -43,22 +40,4 @@ class Parameter:
         parser = argparse.ArgumentParser(description='Convert a number to word')
         parser.add_argument("num", help="the number", type=converter.numbertype)
         parser.add_argument("-v","--verbosity", help="increase output verbosity", action="count", default=0)
-      # parser.add_argument("-v","--verbosity", help=argparse.SUPPRESS, action="count", default=0)
         return parser.parse_args(args)
-
-    # def __init__(self):
-    #     self.number= None
-
-    # def requestInput(self):
-    #     number=input("Enter a number to convert: ")
-
-    #     try:
-    #         number = int(number)
-
-
-    #     return self.number
-
-
-        
-
-

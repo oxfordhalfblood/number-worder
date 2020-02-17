@@ -4,8 +4,6 @@ import sys
 import xmlrunner
 from converter import Converter, Parameter
 
-# test: https://stackoverflow.com/questions/18160078/how-do-you-write-tests-for-the-argparse-portion-of-a-python-module/18161115#18161115
-
 class ConverterTest(unittest.TestCase):
 
     def test_parser_for_zero(self):
@@ -33,7 +31,7 @@ class ConverterTest(unittest.TestCase):
     
     def test_parser_for_help_option(self):
         param = Parameter()
-        args = ['-h']
+        args = ['-h']                       # should exit with error as number argument is a must
         
         with self.assertRaises(SystemExit) as cm:
             param.parsefunc(args)
@@ -43,7 +41,7 @@ class ConverterTest(unittest.TestCase):
     
     def test_parser_for_verbose_option(self):
         param = Parameter()
-        args = ['-v']
+        args = ['-v']                          # should exit with error as number argument is a must
         
         with self.assertRaises(SystemExit) as cm:
             param.parsefunc(args)
@@ -59,6 +57,8 @@ class ConverterTest(unittest.TestCase):
     
         self.assertEqual(cm.exception.code, 2)
 
+# As negative tests has been done for the parser, only valid arguments should go through the converter.num_to_word()
+# function. So we only test for the valid formats for this function
     def test_converter_for_pos_integer(self):
         converter = Converter()
         converted = converter.num_to_word('052')
@@ -73,12 +73,6 @@ class ConverterTest(unittest.TestCase):
         converter = Converter()
         converted = converter.num_to_word('1111111')
         self.assertEqual(converted, 'oneoneoneoneoneoneone')
-
-
-        # self.assertEqual(param.parse_args(converter), 'two')
-
-        # parsed = self.parser.parse_args(['--something', 'test'])
-        # self.assertEqual(parsed.something, 'test')
 
 if __name__ == "__main__":
     unittest.main(testRunner=xmlrunner.XMLTestRunner(output='test-results'))
