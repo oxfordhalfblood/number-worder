@@ -15,5 +15,14 @@ python3 -m venv numberword
 source /Users/afrida/Documents/Course/number-worder/numberword/bin/activate
 deactivate
 
-10. 
+10. For git steps:
+    git add .
+    git commit -m "Initial commit"
+    <create a github repo without readme.>
+    git remote add origin https://github.com/oxfordhalfblood/number-worder.git
+    git push -u origin master
+
+11. CI links: https://circleci.com/blog/setting-up-continuous-integration-with-github/
+
+
 
