@@ -1,4 +1,4 @@
-1. Download the repo
+1. make workspace folder
 2. Open terminal
 3. change directory by using:
     `cd /your_path/number-worder`
@@ -11,9 +11,10 @@
 `docker build -t python-barcode .`
 `docker run --rm python-barcode 20`
 9. 
-python3 -m venv numberword
-source /Users/afrida/Documents/Course/number-worder/numberword/bin/activate
-deactivate
+pip install pipenv
+pipenv run python converterTest.py
+pipenv run python ./mainapp.exe 32
+
 
 10. For git steps:
     git add .

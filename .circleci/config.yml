@@ -10,6 +10,7 @@ jobs:
       - checkout
       - run: sudo chown -R circleci:circleci /usr/local/bin
       - run: sudo chown -R circleci:circleci /usr/local/lib/python3.8/site-packages
+      - run: mkdir test-results
       - restore_cache:
           key: deps1-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
       - run:
@@ -27,7 +28,7 @@ jobs:
           command: |
             pipenv run python converterTest.py
       - store_test_results:
-          path: test-results
+          path: test-results/
       - store_artifacts:
-          path: test-results
+          path: test-results/
           destination: tr1
