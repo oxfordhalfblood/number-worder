@@ -1,6 +1,7 @@
 import unittest
 import argparse
 import sys
+import xmlrunner
 from converter import Converter, Parameter
 
 # test: https://stackoverflow.com/questions/18160078/how-do-you-write-tests-for-the-argparse-portion-of-a-python-module/18161115#18161115
@@ -80,4 +81,4 @@ class ConverterTest(unittest.TestCase):
         # self.assertEqual(parsed.something, 'test')
 
 if __name__ == "__main__":
-    unittest.main()
+    unittest.main(testRunner=xmlrunner.XMLTestRunner(output='test-results'))
