@@ -15,7 +15,7 @@ jobs:
       - save_cache:
           key: deps1-{{ .Branch }}-{{ checksum "requirements.txt" }}
           paths:
-            - "numberword"
+            - 'numberword'
       - run:
           name: Running tests
           command: |
