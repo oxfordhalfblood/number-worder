@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  build_t2:
+  build:
     working_directory: ~/number-worder
     docker:
       - image: circleci/python:3.8
