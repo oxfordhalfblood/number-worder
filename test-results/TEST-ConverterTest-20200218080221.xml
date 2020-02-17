@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ConverterTest-20200218080221" tests="10" file=".py" time="0.031" timestamp="2020-02-18T08:02:21" failures="0" errors="0" skipped="0">
+	<testcase classname="ConverterTest" name="test_converter_for_all_zero" time="0.007" timestamp="2020-02-18T08:02:21" file="converterTest.py" line="67">
+		<system-out><![CDATA[zerozerozerozero
+]]></system-out>
+		<system-err><![CDATA[]]></system-err>
+	</testcase>
+	<testcase classname="ConverterTest" name="test_converter_for_pos_integer" time="0.001" timestamp="2020-02-18T08:02:21" file="converterTest.py" line="62">
+		<system-out><![CDATA[zerofivetwo
+]]></system-out>
+		<system-err><![CDATA[]]></system-err>
+	</testcase>
+	<testcase classname="ConverterTest" name="test_converter_for_ro" time="0.001" timestamp="2020-02-18T08:02:21" file="converterTest.py" line="72">
+		<system-out><![CDATA[oneoneoneoneoneoneone
+]]></system-out>
+		<system-err><![CDATA[]]></system-err>
+	</testcase>
+	<testcase classname="ConverterTest" name="test_parser_for_alphacharacters" time="0.004" timestamp="2020-02-18T08:02:21" file="converterTest.py" line="22">
+		<system-out><![CDATA[]]></system-out>
+		<system-err><![CDATA[usage: converterTest.py [-h] [-v] num
+converterTest.py: error: argument num: invalid numbertype value: 'ssa'
+]]></system-err>
+	</testcase>
+	<testcase classname="ConverterTest" name="test_parser_for_bignumber" time="0.002" timestamp="2020-02-18T08:02:21" file="converterTest.py" line="28">
+		<system-out><![CDATA[]]></system-out>
+		<system-err><![CDATA[]]></system-err>
+	</testcase>
+	<testcase classname="ConverterTest" name="test_parser_for_help_option" time="0.007" timestamp="2020-02-18T08:02:21" file="converterTest.py" line="34">
+		<system-out><![CDATA[usage: converterTest.py [-h] [-v] num
+
+Convert a number to word
+
+positional arguments:
+  num              the number
+
+optional arguments:
+  -h, --help       show this help message and exit
+  -v, --verbosity  increase output verbosity
+]]></system-out>
+		<system-err><![CDATA[]]></system-err>
+	</testcase>
+	<testcase classname="ConverterTest" name="test_parser_for_negative_zero" time="0.002" timestamp="2020-02-18T08:02:21" file="converterTest.py" line="16">
+		<system-out><![CDATA[]]></system-out>
+		<system-err><![CDATA[usage: converterTest.py [-h] [-v] num
+converterTest.py: error: argument num: Value has to be positive integer
+]]></system-err>
+	</testcase>
+	<testcase classname="ConverterTest" name="test_parser_for_verbose2_option" time="0.004" timestamp="2020-02-18T08:02:21" file="converterTest.py" line="53">
+		<system-out><![CDATA[]]></system-out>
+		<system-err><![CDATA[usage: converterTest.py [-h] [-v] num
+converterTest.py: error: the following arguments are required: num
+]]></system-err>
+	</testcase>
+	<testcase classname="ConverterTest" name="test_parser_for_verbose_option" time="0.002" timestamp="2020-02-18T08:02:21" file="converterTest.py" line="44">
+		<system-out><![CDATA[]]></system-out>
+		<system-err><![CDATA[usage: converterTest.py [-h] [-v] num
+converterTest.py: error: the following arguments are required: num
+]]></system-err>
+	</testcase>
+	<testcase classname="ConverterTest" name="test_parser_for_zero" time="0.001" timestamp="2020-02-18T08:02:21" file="converterTest.py" line="11">
+		<system-out><![CDATA[]]></system-out>
+		<system-err><![CDATA[]]></system-err>
+	</testcase>
+</testsuite>
