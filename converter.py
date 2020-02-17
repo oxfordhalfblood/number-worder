@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import argparse
 
 # look afterwards:  https://stackoverflow.com/questions/30956688/python-argparse-customizing-error-messages
