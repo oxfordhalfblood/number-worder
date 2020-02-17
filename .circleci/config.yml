@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  build_test:
+  build_t:
     working_directory: ~/number-worder
     docker:
       - image: circleci/python:3.8
@@ -25,7 +25,7 @@ jobs:
       - run:
           name: Running tests
           command: |
-            pipenv run python ./converterTests.py
+          pipenv run python converterTest.py
       - store_test_results:
           path: test-results
       - store_artifacts:
