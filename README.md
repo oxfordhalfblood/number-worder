@@ -3,11 +3,11 @@
 2. cd to the repo folder
 3. pipenv install
 4. pipenv shell (activate virtual env, if you want to exit typ: `exit`)
-5. pipenv run python ./mainapp.exe 32 (This runs the console app)
+5. pipenv run python ./mainapp.exe 32 (This runs the console app, instead of 32 you can give any number)
 6. pipenv run python converterTest.py (This runs test)
 
 
-## How to builds & run tests inside Github pipeline?
+## How to build & run test inside Github pipeline?
 
 The pipeline result should be visible here publicly:
 https://app.circleci.com/jobs/github/oxfordhalfblood/number-worder/16
